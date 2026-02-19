@@ -15,25 +15,6 @@
   const y = $("#year");
   if (y) y.textContent = String(new Date().getFullYear());
 
-  // Accent theme (persisted)
-  const html = document.documentElement;
-  const accentToggle = $("#accentToggle");
-  const savedAccent = localStorage.getItem("accent");
-  if (savedAccent === "matrix" || savedAccent === "purple") {
-    html.setAttribute("data-accent", savedAccent);
-  }
-
-  function cycleAccent() {
-    const current = html.getAttribute("data-accent") || "purple";
-    const next = current === "purple" ? "matrix" : "purple";
-    html.setAttribute("data-accent", next);
-    localStorage.setItem("accent", next);
-    toast(`Accent: ${next === "matrix" ? "Matrix Green" : "Purple"}`);
-  }
-
-  if (accentToggle) {
-    accentToggle.addEventListener("click", cycleAccent);
-  }
 
   // Mobile nav
   const navToggle = $("#navToggle");
