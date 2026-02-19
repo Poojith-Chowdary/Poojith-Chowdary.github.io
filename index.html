@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en" data-accent="purple">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poojith Chowdary Manne • Portfolio</title>
+  <meta name="description" content="Portfolio of Poojith Chowdary Manne — Computer Science (AI/ML) projects, skills, and contact." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0b0b0f" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb--a"></div>
+    <div class="orb orb--b"></div>
+    <div class="orb orb--c"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="header" id="top">
+    <div class="header__inner container">
+      <a class="logo" href="#top" aria-label="Home">
+        <span class="logo__mark" aria-hidden="true">PC</span>
+        <span class="logo__text">Poojith</span>
+      </a>
+
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="siteNav" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav" id="siteNav" aria-label="Primary">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#education">Education</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#certifications">Certifications</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="assets/Poojith_Chowdary_Resume.pdf" download>
+          <span class="btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          Resume
+        </a>
+
+        <button class="btn btn--ghost" id="accentToggle" type="button" aria-label="Toggle accent theme">
+          <span class="pill" aria-hidden="true"></span>
+          Accent
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Masters in Computer Science • California State University, Chico</p>
+          <h1 class="hero__title">Poojith Chowdary Manne</h1>
+          <p class="hero__subtitle">
+            AI/ML-focused developer building practical systems — from agents and automation to
+            deep-learning powered recommendations.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+
+          <div class="hero__links" aria-label="Quick links">
+            <a class="chip" href="mailto:poojithchowdary5500@gmail.com">
+              <span class="chip__icon" aria-hidden="true">✉</span>
+              poojithchowdary5500@gmail.com
+            </a>
+            <a class="chip" href="https://github.com/Poojith-Chowdary" target="_blank" rel="noreferrer">
+              <span class="chip__icon" aria-hidden="true">⌘</span>
+              GitHub
+            </a>
+            <a class="chip" href="https://www.linkedin.com/in/manne-poojith-chowdary-a99440234/" target="_blank" rel="noreferrer">
+              <span class="chip__icon" aria-hidden="true">in</span>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <aside class="card hero__card" aria-label="Highlights">
+          <h2 class="card__title">Highlights</h2>
+
+          <div class="kpi-grid">
+            <div class="kpi">
+              <div class="kpi__value">4.0</div>
+              <div class="kpi__label">MS CGPA</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi__value">4th</div>
+              <div class="kpi__label">Fetch.ai hackathon</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi__value">AI/ML</div>
+              <div class="kpi__label">Focus</div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="stack">
+            <p class="muted">
+              Interested in building intelligent, reliable products with clean UI + strong engineering.
+            </p>
+
+            <div class="mini-actions">
+              <button class="btn btn--ghost btn--sm" id="copyEmail" type="button" data-copy="poojithchowdary5500@gmail.com">
+                Copy email
+              </button>
+              <a class="btn btn--ghost btn--sm" href="assets/Poojith_Chowdary_Resume.pdf" download>Download resume</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__header">
+          <h2>About</h2>
+          <p class="muted">
+            Graduate CS student with experience across AI/ML, CV/NLP, and full‑stack development.
+          </p>
+        </header>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3 class="card__title">Summary</h3>
+            <p>
+              I’m currently pursuing a <strong>Masters in Computer Science</strong> at California State University, Chico.
+              I enjoy designing end‑to‑end systems — from model building and evaluation to deploying clean web apps.
+            </p>
+            <p class="muted">
+              My recent work includes multi-agent procurement automation, emotion-aware music recommendations,
+              and implementing neural networks from scratch in Go.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">What I work with</h3>
+            <ul class="list">
+              <li><strong>AI/ML:</strong> CNNs, deep learning pipelines, feature engineering, evaluation</li>
+              <li><strong>Computer Vision & NLP:</strong> OpenCV, speech + visual cues</li>
+              <li><strong>Engineering:</strong> Python, Go, Java, SQL, web fundamentals</li>
+              <li><strong>Tools:</strong> VS Code, Jupyter, Colab, Kaggle, Linux</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <header class="section__header">
+          <h2>Education</h2>
+          <p class="muted">Academic journey and coursework focus.</p>
+        </header>
+
+        <div class="timeline">
+          <article class="card timeline__item">
+            <div class="timeline__meta">
+              <span class="badge">Aug 2025 – Present</span>
+              <span class="muted">California State University, Chico</span>
+            </div>
+            <h3 class="timeline__title">Masters • Computer Science</h3>
+            <p class="muted">CGPA: <strong>4.0</strong></p>
+          </article>
+
+          <article class="card timeline__item">
+            <div class="timeline__meta">
+              <span class="badge">Nov 2021 – May 2025</span>
+              <span class="muted">VNR Vignana Jyothi Institute of Engineering and Technology</span>
+            </div>
+            <h3 class="timeline__title">B.Tech • CSE (Artificial Intelligence & Machine Learning)</h3>
+            <p class="muted">CGPA: <strong>7.12</strong></p>
+          </article>
+
+          <article class="card timeline__item">
+            <div class="timeline__meta">
+              <span class="badge">Feb 2019 – Sep 2021</span>
+              <span class="muted">Narayana Junior College</span>
+            </div>
+            <h3 class="timeline__title">Intermediate • MPC</h3>
+            <p class="muted">Percentage: <strong>96.8%</strong> • Board: TSBIE</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__header">
+          <h2>Projects</h2>
+          <p class="muted">Selected work — click through for code.</p>
+        </header>
+
+        <div class="cards-3">
+          <article class="card project" data-reveal>
+            <div class="project__top">
+              <h3 class="project__title">Procurement Management System using uAgents</h3>
+              <a class="icon-link" href="https://github.com/Poojith-Chowdary/Fetch.ai" target="_blank" rel="noreferrer" aria-label="Open GitHub repository">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.87c0-1.1.37-1.83 1-2.47-3.33-.37-6.83-1.67-6.83-7.4 0-1.63.58-2.97 1.53-4.02-.15-.38-.66-1.92.15-4 0 0 1.25-.4 4.1 1.53A14.2 14.2 0 0 1 12 6.8c1.28.01 2.57.17 3.77.5 2.84-1.93 4.08-1.53 4.08-1.53.82 2.08.31 3.62.16 4 .95 1.05 1.52 2.39 1.52 4.02 0 5.75-3.5 7.02-6.85 7.38.48.42 1 .98 1 2.17V22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="muted">
+              Automates procurement workflows using uAgents: supplier selection, quality checks,
+              transport logistics, and order confirmations.
+            </p>
+
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>Flask</li><li>React</li><li>JavaScript</li><li>HTML/CSS</li>
+            </ul>
+
+            <p class="project__note">
+              <strong>Fetch.ai hackathon (IIT Guwahati):</strong> placed <strong>4th</strong> among top contenders.
+            </p>
+          </article>
+
+          <article class="card project" data-reveal>
+            <div class="project__top">
+              <h3 class="project__title">Emotion‑Based Music Recommendation System</h3>
+              <a class="icon-link" href="https://github.com/Poojith-Chowdary/Emotion-based-Music-Recommendation-System" target="_blank" rel="noreferrer" aria-label="Open GitHub repository">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.87c0-1.1.37-1.83 1-2.47-3.33-.37-6.83-1.67-6.83-7.4 0-1.63.58-2.97 1.53-4.02-.15-.38-.66-1.92.15-4 0 0 1.25-.4 4.1 1.53A14.2 14.2 0 0 1 12 6.8c1.28.01 2.57.17 3.77.5 2.84-1.93 4.08-1.53 4.08-1.53.82 2.08.31 3.62.16 4 .95 1.05 1.52 2.39 1.52 4.02 0 5.75-3.5 7.02-6.85 7.38.48.42 1 .98 1 2.17V22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="muted">
+              Classifies emotions (Angry, Calm, Neutral, Happy, Sad) using audio + video signals,
+              then recommends music tracks aligned to the predicted mood.
+            </p>
+
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>CNN</li><li>TensorFlow</li><li>Keras</li><li>Librosa</li>
+            </ul>
+
+            <p class="project__note">
+              Focus: deep learning pipeline + multimodal cues (visual + speech).
+            </p>
+          </article>
+
+          <article class="card project" data-reveal>
+            <div class="project__top">
+              <h3 class="project__title">Neural Network from Scratch in Go</h3>
+              <a class="icon-link" href="https://github.com/Poojith-Chowdary/Neural-Network-using-Go" target="_blank" rel="noreferrer" aria-label="Open GitHub repository">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.87c0-1.1.37-1.83 1-2.47-3.33-.37-6.83-1.67-6.83-7.4 0-1.63.58-2.97 1.53-4.02-.15-.38-.66-1.92.15-4 0 0 1.25-.4 4.1 1.53A14.2 14.2 0 0 1 12 6.8c1.28.01 2.57.17 3.77.5 2.84-1.93 4.08-1.53 4.08-1.53.82 2.08.31 3.62.16 4 .95 1.05 1.52 2.39 1.52 4.02 0 5.75-3.5 7.02-6.85 7.38.48.42 1 .98 1 2.17V22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="muted">
+              Implements a basic neural network in Go using only core math operations.
+              Trained with backpropagation + L2 regularization for classification tasks.
+            </p>
+
+            <ul class="tags" aria-label="Tech stack">
+              <li>Go</li><li>Neural Networks</li><li>CSV I/O</li><li>Metrics</li>
+            </ul>
+
+            <p class="project__note">
+              Reads training/testing data from CSV; prints and plots performance metrics.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__header">
+          <h2>Skills</h2>
+          <p class="muted">A quick view of tools & technologies.</p>
+        </header>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3 class="card__title">Programming</h3>
+            <div class="pillbox" aria-label="Programming languages">
+              <span class="pilltag">C++</span>
+              <span class="pilltag">C</span>
+              <span class="pilltag">Python</span>
+              <span class="pilltag">Java</span>
+              <span class="pilltag">SQL</span>
+              <span class="pilltag">JavaScript</span>
+              <span class="pilltag">HTML</span>
+              <span class="pilltag">CSS</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Special Skills</h3>
+            <div class="pillbox">
+              <span class="pilltag">Machine Learning</span>
+              <span class="pilltag">NLP</span>
+              <span class="pilltag">OpenCV</span>
+              <span class="pilltag">DSA</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Tools</h3>
+            <div class="pillbox">
+              <span class="pilltag">VS Code</span>
+              <span class="pilltag">Jupyter</span>
+              <span class="pilltag">Google Colab</span>
+              <span class="pilltag">Kaggle</span>
+              <span class="pilltag">Linux</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid-2 mt">
+          <article class="card">
+            <h3 class="card__title">Languages</h3>
+            <ul class="list">
+              <li>English (Proficient)</li>
+              <li>Telugu (Mother Tongue)</li>
+              <li>Hindi (Proficient)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Interests</h3>
+            <div class="pillbox" aria-label="Interests">
+              <span class="pilltag">Coding</span>
+              <span class="pilltag">Sports</span>
+              <span class="pilltag">Gaming</span>
+              <span class="pilltag">Motorsports</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <header class="section__header">
+          <h2>Certifications</h2>
+          <p class="muted">Links included as provided.</p>
+        </header>
+
+        <div class="grid-3">
+          <a class="card link-card" href="https://shorturl.at/eSd92" target="_blank" rel="noreferrer">
+            <div class="link-card__icon" aria-hidden="true">✓</div>
+            <div>
+              <h3 class="card__title">Supervised Machine Learning</h3>
+              <p class="muted">Regression and Classification</p>
+            </div>
+            <span class="chev" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="card link-card" href="https://shorturl.at/NsNuf" target="_blank" rel="noreferrer">
+            <div class="link-card__icon" aria-hidden="true">✓</div>
+            <div>
+              <h3 class="card__title">Java</h3>
+              <p class="muted">Certificate</p>
+            </div>
+            <span class="chev" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="card link-card" href="https://shorturl.at/9ThYE" target="_blank" rel="noreferrer">
+            <div class="link-card__icon" aria-hidden="true">✓</div>
+            <div>
+              <h3 class="card__title">SQL</h3>
+              <p class="muted">Certificate</p>
+            </div>
+            <span class="chev" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section__header">
+          <h2>Contact</h2>
+          <p class="muted">Let’s connect — email is best.</p>
+        </header>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3 class="card__title">Details</h3>
+
+            <div class="contact-list">
+              <a class="contact-item" href="mailto:poojithchowdary5500@gmail.com">
+                <span class="contact-item__label">Email</span>
+                <span class="contact-item__value">poojithchowdary5500@gmail.com</span>
+              </a>
+
+              <a class="contact-item" href="tel:+13473178454">
+                <span class="contact-item__label">Phone</span>
+                <span class="contact-item__value">+1 347 317 8454</span>
+              </a>
+
+              <a class="contact-item" href="https://www.linkedin.com/in/manne-poojith-chowdary-a99440234/" target="_blank" rel="noreferrer">
+                <span class="contact-item__label">LinkedIn</span>
+                <span class="contact-item__value">manne-poojith-chowdary</span>
+              </a>
+
+              <a class="contact-item" href="https://github.com/Poojith-Chowdary" target="_blank" rel="noreferrer">
+                <span class="contact-item__label">GitHub</span>
+                <span class="contact-item__value">Poojith-Chowdary</span>
+              </a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="mini-actions">
+              <button class="btn btn--primary" id="copyAll" type="button">
+                Copy contact info
+              </button>
+              <a class="btn" href="assets/Poojith_Chowdary_Resume.pdf" download>Resume PDF</a>
+            </div>
+
+            <p class="fineprint">
+              Tip: If you want a working contact form on GitHub Pages, use a free service like Formspree
+              (no backend needed) or keep it simple with email.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">One‑liner</h3>
+            <p class="muted">
+              “I build AI/ML systems and clean, deployable software — with a bias for practical results.”
+            </p>
+
+            <div class="divider"></div>
+
+            <h3 class="card__title">Availability</h3>
+            <p class="muted">
+              Open to internships, part‑time roles, and research projects in AI/ML, CV, NLP, and full‑stack work.
+            </p>
+
+            <a class="btn btn--ghost mt" href="#projects">See projects</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container footer-cta">
+        <div class="footer-cta__text">
+          <h2>Want this in “Matrix Green” by default?</h2>
+          <p class="muted">Click Accent in the header — the choice is saved in your browser.</p>
+        </div>
+        <a class="btn btn--primary" href="#top">Back to top</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="muted">© <span id="year"></span> Poojith Chowdary Manne • Built for GitHub Pages</p>
+
+      <div class="footer__links">
+        <a class="icon-link" href="https://github.com/Poojith-Chowdary" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.87c0-1.1.37-1.83 1-2.47-3.33-.37-6.83-1.67-6.83-7.4 0-1.63.58-2.97 1.53-4.02-.15-.38-.66-1.92.15-4 0 0 1.25-.4 4.1 1.53A14.2 14.2 0 0 1 12 6.8c1.28.01 2.57.17 3.77.5 2.84-1.93 4.08-1.53 4.08-1.53.82 2.08.31 3.62.16 4 .95 1.05 1.52 2.39 1.52 4.02 0 5.75-3.5 7.02-6.85 7.38.48.42 1 .98 1 2.17V22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <a class="icon-link" href="https://www.linkedin.com/in/manne-poojith-chowdary-a99440234/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M4 4h4v16H4zM6 2.75A2.25 2.25 0 1 1 6 7.25 2.25 2.25 0 0 1 6 2.75zM10 8h4v2.2c.6-1.1 1.8-2.2 4-2.2 3.3 0 6 2.2 6 7v7h-4v-6.4c0-2.4-.9-4-2.9-4-1.6 0-2.5 1.1-2.9 2.1-.1.3-.2.8-.2 1.3V22h-4z" fill="currentColor"/>
+          </svg>
+        </a>
+
+        <a class="icon-link" href="mailto:poojithchowdary5500@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
