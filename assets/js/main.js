@@ -15,6 +15,25 @@
   const y = $("#year");
   if (y) y.textContent = String(new Date().getFullYear());
 
+  // Accent theme (persisted)
+  const html = document.documentElement;
+  const accentToggle = $("#accentToggle");
+  const savedAccent = localStorage.getItem("accent");
+  if (savedAccent === "matrix" || savedAccent === "purple") {
+    html.setAttribute("data-accent", savedAccent);
+  }
+
+  function cycleAccent() {
+    const current = html.getAttribute("data-accent") || "purple";
+    const next = current === "purple" ? "matrix" : "purple";
+    html.setAttribute("data-accent", next);
+    localStorage.setItem("accent", next);
+    toast(`Accent: ${next === "matrix" ? "Matrix Green" : "Purple"}`);
+  }
+
+  if (accentToggle) {
+    accentToggle.addEventListener("click", cycleAccent);
+  }
 
   // Mobile nav
   const navToggle = $("#navToggle");
@@ -130,6 +149,57 @@
     );
 
     revealEls.forEach((el) => reveal.observe(el));
+  }
+
+  // KPI count-up (numeric values only; non-numeric like "4th" or "AI/ML" are left as-is)
+  const kpiValues = $$(".kpi__value");
+  if (kpiValues.length) {
+    const animateKpi = (el) => {
+      const raw = el.textContent.trim();
+      const match = raw.match(/^(\d+(?:\.\d+)?)(.*)$/);
+      if (!match) return; // not a number we can animate (e.g. "AI/ML")
+      const target = parseFloat(match[1]);
+      const suffix = match[2] || "";
+      const decimals = match[1].includes(".") ? match[1].split(".")[1].length : 0;
+      const duration = 900;
+      const start = performance.now();
+
+      function tick(now) {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const value = target * eased;
+        el.textContent = value.toFixed(decimals) + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    };
+
+    const kpiObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateKpi(entry.target);
+            kpiObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    kpiValues.forEach((el) => kpiObserver.observe(el));
+  }
+
+  // Subtle mouse-tilt parallax on the hero highlights card
+  const heroCard = $(".hero__card");
+  if (heroCard && !window.matchMedia("(prefers-reduced-motion: reduce)").matches && !window.matchMedia("(max-width: 860px)").matches) {
+    heroCard.addEventListener("mousemove", (e) => {
+      const rect = heroCard.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      heroCard.style.transform = `perspective(900px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg)`;
+    });
+    heroCard.addEventListener("mouseleave", () => {
+      heroCard.style.transform = "perspective(900px) rotateY(0deg) rotateX(0deg)";
+    });
   }
 
   // Toast
