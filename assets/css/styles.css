@@ -34,19 +34,15 @@ html[data-accent="matrix"]{
 }
 
 *{box-sizing:border-box}
-html, body{height:100%}
 html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color:var(--text);
-  background:
-    radial-gradient(1200px 800px at 20% 10%, rgba(124,58,237,.20), transparent 60%),
-    radial-gradient(900px 700px at 80% 25%, rgba(0,255,123,.10), transparent 65%),
-    radial-gradient(900px 900px at 50% 110%, rgba(167,139,250,.18), transparent 55%),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
+  background: var(--bg1);
   overflow-x:hidden;
   line-height:1.55;
+  position: relative;
 }
 
 a{color:inherit; text-decoration:none}
@@ -79,25 +75,41 @@ img{max-width:100%; display:block}
   z-index:9999;
 }
 
+/* Full-document background: absolutely positioned (not fixed) so it spans
+   the entire page height rather than clipping to one viewport. This is
+   what removes the hard seam that appeared once you scrolled past 100vh. */
 .bg{
-  position:fixed;
+  position:absolute;
   inset:0;
+  height:100%;
+  min-height:100%;
   pointer-events:none;
   z-index:-1;
+  background: linear-gradient(180deg, var(--bg0), var(--bg1));
+}
+.bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(1400px 1000px at 18% 6%, rgba(124,58,237,.22), transparent 62%),
+    radial-gradient(1300px 1100px at 85% 18%, rgba(0,255,123,.13), transparent 64%),
+    radial-gradient(1300px 1300px at 45% 55%, rgba(124,58,237,.10), transparent 60%),
+    radial-gradient(1300px 1300px at 60% 92%, rgba(167,139,250,.16), transparent 58%);
 }
 .orb{
   position:absolute;
-  width:560px;
-  height:560px;
+  width:680px;
+  height:680px;
   border-radius:999px;
-  filter: blur(50px);
-  opacity:.55;
+  filter: blur(110px);
+  opacity:.4;
   transform: translateZ(0);
-  animation: orbDrift 22s ease-in-out infinite;
+  animation: orbDrift 26s ease-in-out infinite;
 }
-.orb--a{left:-120px; top:-160px; background: rgba(124,58,237,.35); animation-delay: 0s;}
-.orb--b{right:-160px; top:80px; background: rgba(0,255,123,.22); animation-delay: -7s;}
-.orb--c{left:30%; bottom:-220px; background: rgba(167,139,250,.20); animation-delay: -14s;}
+.orb--a{left:-160px; top:60px; background: rgba(124,58,237,.30); animation-delay: 0s;}
+.orb--b{right:-200px; top:560px; background: rgba(0,255,123,.16); animation-delay: -8s;}
+.orb--c{left:20%; top:1200px; background: rgba(167,139,250,.18); animation-delay: -16s;}
 
 @keyframes orbDrift{
   0%, 100% { transform: translate(0, 0) scale(1); }
@@ -262,22 +274,6 @@ img{max-width:100%; display:block}
   padding: 72px 0;
   position: relative;
 }
-.section + .section{
-  margin-top: -1px; /* avoid 1px subpixel seam between sections */
-}
-.section::before{
-  content:"";
-  position:absolute;
-  left:0; right:0; top:0;
-  height: 140px;
-  background: linear-gradient(180deg, rgba(7,7,10,.55), transparent);
-  pointer-events:none;
-  z-index:0;
-}
-.hero::before{
-  display:none;
-}
-.section > *{position:relative; z-index:1}
 .section--compact{
   padding: 44px 0;
 }
