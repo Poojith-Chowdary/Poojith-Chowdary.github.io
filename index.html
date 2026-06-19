@@ -144,16 +144,17 @@
               I enjoy designing end‑to‑end systems — from model building and evaluation to deploying clean web apps.
             </p>
             <p class="muted">
-              My recent work includes multi-agent procurement automation, emotion-aware music recommendations,
-              and implementing neural networks from scratch in Go.
+              My recent work includes a semi-supervised crack detection model on an NVIDIA A100, a real-time
+              computer vision pipeline for weld inspection, multi-agent procurement automation, and
+              emotion-aware music recommendations.
             </p>
           </article>
 
           <article class="card">
             <h3 class="card__title">What I work with</h3>
             <ul class="list">
-              <li><strong>AI/ML:</strong> CNNs, deep learning pipelines, feature engineering, evaluation</li>
-              <li><strong>Computer Vision & NLP:</strong> OpenCV, speech + visual cues</li>
+              <li><strong>AI/ML:</strong> CNNs, ResNet, deep learning pipelines, feature engineering, evaluation</li>
+              <li><strong>Computer Vision & NLP:</strong> OpenCV, YOLO, speech + visual cues</li>
               <li><strong>Engineering:</strong> Python, Go, Java, SQL, web fundamentals</li>
               <li><strong>Tools:</strong> VS Code, Jupyter, Colab, Kaggle, Linux</li>
             </ul>
@@ -187,15 +188,6 @@
             <h3 class="timeline__title">B.Tech • CSE (Artificial Intelligence & Machine Learning)</h3>
             <p class="muted">CGPA: <strong>7.12</strong></p>
           </article>
-
-          <article class="card timeline__item">
-            <div class="timeline__meta">
-              <span class="badge">Feb 2019 – Sep 2021</span>
-              <span class="muted">Narayana Junior College</span>
-            </div>
-            <h3 class="timeline__title">Intermediate • MPC</h3>
-            <p class="muted">Percentage: <strong>96.8%</strong> • Board: TSBIE</p>
-          </article>
         </div>
       </div>
     </section>
@@ -208,6 +200,54 @@
         </header>
 
         <div class="cards-3">
+          <article class="card project" data-reveal>
+            <div class="project__top">
+              <h3 class="project__title">Concrete Crack Detection (Semi-Supervised ResNet50)</h3>
+              <a class="icon-link" href="https://github.com/Poojith-Chowdary/Concrete-Crack-Detection" target="_blank" rel="noreferrer" aria-label="Open GitHub repository">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.87c0-1.1.37-1.83 1-2.47-3.33-.37-6.83-1.67-6.83-7.4 0-1.63.58-2.97 1.53-4.02-.15-.38-.66-1.92.15-4 0 0 1.25-.4 4.1 1.53A14.2 14.2 0 0 1 12 6.8c1.28.01 2.57.17 3.77.5 2.84-1.93 4.08-1.53 4.08-1.53.82 2.08.31 3.62.16 4 .95 1.05 1.52 2.39 1.52 4.02 0 5.75-3.5 7.02-6.85 7.38.48.42 1 .98 1 2.17V22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="muted">
+              A 3-phase semi-supervised pipeline — 10% labeled data, confidence-filtered pseudo-labeling,
+              then fine-tuning — on a ResNet50 backbone, reaching 0.9716 AUC-ROC on a held-out test set.
+            </p>
+
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>TensorFlow</li><li>Keras</li><li>ResNet50</li><li>A100 GPU</li>
+            </ul>
+
+            <p class="project__note">
+              Optimized for an NVIDIA A100 with FP16 mixed precision and XLA JIT compilation.
+            </p>
+          </article>
+
+          <article class="card project" data-reveal>
+            <div class="project__top">
+              <h3 class="project__title">Real-Time WAAM Weld Inspection Pipeline</h3>
+              <a class="icon-link" href="https://github.com/Poojith-Chowdary/Real-Time-WAAM-Inspection" target="_blank" rel="noreferrer" aria-label="Open GitHub repository">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.87c0-1.1.37-1.83 1-2.47-3.33-.37-6.83-1.67-6.83-7.4 0-1.63.58-2.97 1.53-4.02-.15-.38-.66-1.92.15-4 0 0 1.25-.4 4.1 1.53A14.2 14.2 0 0 1 12 6.8c1.28.01 2.57.17 3.77.5 2.84-1.93 4.08-1.53 4.08-1.53.82 2.08.31 3.62.16 4 .95 1.05 1.52 2.39 1.52 4.02 0 5.75-3.5 7.02-6.85 7.38.48.42 1 .98 1 2.17V22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="muted">
+              Locates the wire-to-pool contact point and segments the weld bead in a contact-centered
+              region instead of just thresholding the brighter arc, fused with a GPU-batched YOLO classifier.
+            </p>
+
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>OpenCV</li><li>YOLO</li><li>NumPy</li><li>Matplotlib</li>
+            </ul>
+
+            <p class="project__note">
+              Hits ~25 FPS real-time inference via sparse inspection, ROI locking, and batched GPU calls.
+            </p>
+          </article>
+
           <article class="card project" data-reveal>
             <div class="project__top">
               <h3 class="project__title">Procurement Management System using uAgents</h3>
@@ -255,30 +295,6 @@
               Focus: deep learning pipeline + multimodal cues (visual + speech).
             </p>
           </article>
-
-          <article class="card project" data-reveal>
-            <div class="project__top">
-              <h3 class="project__title">Neural Network from Scratch in Go</h3>
-              <a class="icon-link" href="https://github.com/Poojith-Chowdary/Neural-Network-using-Go" target="_blank" rel="noreferrer" aria-label="Open GitHub repository">
-                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                  <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.87c0-1.1.37-1.83 1-2.47-3.33-.37-6.83-1.67-6.83-7.4 0-1.63.58-2.97 1.53-4.02-.15-.38-.66-1.92.15-4 0 0 1.25-.4 4.1 1.53A14.2 14.2 0 0 1 12 6.8c1.28.01 2.57.17 3.77.5 2.84-1.93 4.08-1.53 4.08-1.53.82 2.08.31 3.62.16 4 .95 1.05 1.52 2.39 1.52 4.02 0 5.75-3.5 7.02-6.85 7.38.48.42 1 .98 1 2.17V22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-
-            <p class="muted">
-              Implements a basic neural network in Go using only core math operations.
-              Trained with backpropagation + L2 regularization for classification tasks.
-            </p>
-
-            <ul class="tags" aria-label="Tech stack">
-              <li>Go</li><li>Neural Networks</li><li>CSV I/O</li><li>Metrics</li>
-            </ul>
-
-            <p class="project__note">
-              Reads training/testing data from CSV; prints and plots performance metrics.
-            </p>
-          </article>
         </div>
       </div>
     </section>
@@ -309,8 +325,11 @@
             <h3 class="card__title">Special Skills</h3>
             <div class="pillbox">
               <span class="pilltag">Machine Learning</span>
+              <span class="pilltag">Deep Learning</span>
+              <span class="pilltag">Computer Vision</span>
               <span class="pilltag">NLP</span>
               <span class="pilltag">OpenCV</span>
+              <span class="pilltag">YOLO</span>
               <span class="pilltag">DSA</span>
             </div>
           </article>
