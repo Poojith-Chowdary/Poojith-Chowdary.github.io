@@ -472,8 +472,13 @@ img{max-width:100%; display:block}
 
 .cards-3{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
+}
+@media (min-width: 1100px){
+  .cards-3{
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .project__top{
